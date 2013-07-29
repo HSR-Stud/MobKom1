@@ -12,7 +12,22 @@
 %
 % DORT NUR ERGÄNZEN, NICHTS LÖSCHEN
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
-\include{header}
+\include{header/header}
+
+\newenvironment{liste}[0]{
+	\begin{list}{$\bullet$}{\setlength{\itemsep}{0cm}\setlength{\parsep}{0cm} \setlength{\topsep}{0cm}}}
+    {\end{list}}
+\newenvironment{aufzaehlung}[0]{
+	\begin{enumerate}{\setlength{\itemsep}{0cm}\setlength{\parsep}{0cm}
+	\setlength{\topsep}{0cm}}} {\end{enumerate}}    
+
+\newcommand{\abbHeight}[3]{
+	\begin{center}
+		\includegraphics[height=#2]{./bilder/#1} \\
+		#3
+    \end{center}
+}
+
 
 % Möglichst keine Ergänzungen hier, sondern in header.tex
 \begin{document} 
